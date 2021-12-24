@@ -1,14 +1,33 @@
-p {color:red}
-header {background-color: #fac926;}
+header {background-color: #EAC926;
+}
+
+#centrado {text-align :center;
+}
+
+a {text-decoration: none;
+   color : black;
+   text-align: left;
+}
+
+h3 {font-size: 24px;
+}
+
+h4 {font-size: 16px;
+}
+
+.body {font-family:roboto;
+}
+
+
 .burger-menu {
     background-color: #1259c3;
     width : 20px;
     color: white;
-    border-radius: 10%;
     text-align: center;
     padding: 8px;
 }
 
-.compra { align: center}
+.compra { align: center;
+}
 
-.navbar{ text-decoration: none;}
+
