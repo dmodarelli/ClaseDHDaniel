@@ -1,0 +1,58 @@
+let autos = require('./autos');
+
+let concesionaria = {
+    autos: autos,
+    buscarAuto: function (patente) {
+        for (let i = 0; i <= autos.length; i++) {
+            if (patente == autos[i].patente) {
+                return autos[i];
+            } else if (patente != autos[i].patente && i == (autos.length - 1)) {
+                return null;
+            }
+        }
+    },
+    venderAuto: function (patente) {
+        let autos = this.buscarAuto(patente);
+        if (autos) {
+            autos.vendido = true
+        }
+    },
+    autosParaLaVenta: function () {
+        let autosDisponibles = this.autos.filter(function (patente) {
+            return patente.vendido == false
+        });
+        return autosDisponibles
+    },
+    autosNuevos: function () {
+        let nuevo = this.autosParaLaVenta().filter(function (patente) {
+            return patente.kilometraje < 100
+        });
+        return nuevo
+    },
+    listaDeVentas: function () {
+        let ventas = this.autos.filter(function (patente) {
+            return patente.vendido == true
+        });
+        let lista = [];
+        ventas.forEach(function (costo) {
+            lista.push(costo.precio);
+        })
+        return lista;
+    },
+    totalDeVentas: function () {
+        const total = this.listaDeVentas().reduce((acu, item) => {
+            return acu + item;
+        }, 0);
+        return total;
+    },
+
+    puedeComprar: function (autos, persona) {
+        if (this.autos.total > persona.capacidadDePagoTotal) { 
+            return false;  }
+        let precioPorCuota = this.autos.total / this.autos.cuotas 
+        if (precioPorCuota > persona.capacidadDePagoEnCuotas) {
+          return false;
+        }
+        return true;
+     }
+}

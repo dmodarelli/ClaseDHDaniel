@@ -1,0 +1,23 @@
+let autos = require("./autos") ;
+
+let concesionaria = {
+    autos : autos,
+     buscarAuto: function buscar(patente) {
+         let autoEncontrado = null
+         this.autos.forEach(auto => {
+             if(auto.patente === patente){
+                 autoEncontrado = auto;
+                 
+             }
+         })
+        return autoEncontrado;
+        
+     },
+     venderAuto: function () {
+         let estado = this.buscarAuto() 
+         if (estado.vendido === false){ 
+             return autos.vendido = true
+         }
+         
+    } 
+} 
