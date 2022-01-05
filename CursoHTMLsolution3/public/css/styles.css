@@ -3,10 +3,7 @@
     padding: 0px;
 }
 
-body{   font-family: 'Roboto', sans-serif;
-        background-color: #ebebeb;
-        width: 100%
-    
+body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
@@ -80,16 +77,6 @@ div.burger-menu i{
     padding: 10px;
     width: 40px;
 }
-@media (max-width: 361px){
-    h4 {text-decoration: none;}
-}
-
-article div.main-article{
-    width: 90%;
-    border: 1px solid red;
-    padding: 15px;
-    
-}
 
 .price{
     font-size: 18px;
@@ -106,16 +93,23 @@ h3,
     color: #666;
 }
 
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
 section.banner img{
     width: 100%;
 }
 
 main{
     width: 90%;
+    margin: 0 auto;
 }
 
 main section article{
-    background-color: #fff;
+    background-color: #fff;    
+    margin: 10px 0px;
 }
 
 main section article img{
@@ -127,4 +121,36 @@ main section article i,
     color: #39b54a;
 }
 
+main section article i{
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+}
 
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (min-width: 769px){
+
+}
