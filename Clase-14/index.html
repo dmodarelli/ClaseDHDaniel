@@ -14,25 +14,29 @@
      .contenedor{
          height: 100vh;
          display:flex;
-         flex-direction: row;
-         flex-wrap: wrap-reverse;
-         justify-content: space-between;
-         align-items: center;
+         flex-direction: column;
+         
+      
+         align-items: flex-start ;
      }
      .elemento1{
          width: 100px;
          height: 100px;
          background-color: red;
+         align-content: initial;
      }
      .elemento2{
          width: 100px;
          height: 100px;
          background-color: blue;
+         align-self:calc():flex-end ;
+         
      }
      .elemento3{
          width: 100px;
          height: 100px;
          background-color: yellow;
+         align-self: flex-end;
      }
 
  </style>
