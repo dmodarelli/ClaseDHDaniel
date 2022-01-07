@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -79,9 +80,19 @@ div.burger-menu i{
 }
 
 .price{
+    flex-grow: 1;
     font-size: 18px;
+    padding-right: 10px;
 }
-
+.discount{
+    flex-grow: 2;
+    
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .discount,
 .description{
     font-size: 16px;
@@ -122,6 +133,7 @@ main section article i,
 }
 
 main section article i{
+    display: block;
     font-size: 16px;
     padding: 5px;
     width: 30px;
@@ -129,6 +141,9 @@ main section article i{
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;    
 }
 
 main section h3{
@@ -139,6 +154,7 @@ article div.main-article{
     width: 100%;
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
 }
 
 @media (min-width: 361px){
