@@ -41,12 +41,22 @@ header .form{
 header div.logo{
     padding: 10px;
 }
-header .form{
-    display: flex;
-    align-items: center;
+header div.form{
+    align-self:center ;
     padding: 2px;
     font-size: 11px;
 }
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid rgb(192, 170, 170);
+    color: #666;
+    width: 20%;
+    height: 25px;
+}
+
+
+
 header nav{
     font-size: 12px;
     margin-left: 20px;
@@ -59,21 +69,6 @@ header ul li{
 header ul li a{
     text-decoration: none;
     color: #000;
-}
-
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
-
-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
 }
 
 div.burger-menu{
